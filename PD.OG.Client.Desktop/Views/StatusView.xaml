@@ -1,0 +1,103 @@
+﻿<UserControl
+    x:Class="PD.OG.Client.Desktop.Views.StatusView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PD.OG.Client.Desktop.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="400"
+    DataContext="{Binding Status, Source={StaticResource ViewModelLocator}}"
+    mc:Ignorable="d">
+    <Border Background="#9EF7F9F9">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Border Margin="2,0,2,0" Background="{StaticResource BorderDarkGray}">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button
+                        Command="{Binding DownloadEpisodesCommand}"
+                        Content="{StaticResource DownloadEpisodeIcon}"
+                        Style="{StaticResource EpisodeItemButton}"
+                        ToolTip="Download selected episodes" />
+                    <Button
+                        BorderBrush="White"
+                        BorderThickness="1"
+                        Content="{StaticResource DeleteEpisodeIcon}"
+                        Style="{StaticResource EpisodeItemButton}"
+                        ToolTip="Delete selected episodes" />
+                </StackPanel>
+            </Border>
+            <ListView
+                Grid.Row="1"
+                HorizontalContentAlignment="Stretch"
+                Background="Transparent"
+                BorderThickness="0"
+                Cursor="Hand"
+                ItemsSource="{Binding Episodes}"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                SelectionMode="Multiple">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Padding" Value="0" />
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ListViewItem}}}" Value="True">
+                                            <Setter Property="Grid.Background" Value="#6DB4A0" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="16" />
+                                <RowDefinition Height="45" />
+                            </Grid.RowDefinitions>
+                            <Border
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                Width="60"
+                                Height="60"
+                                Margin="1"
+                                Background="#A4837492">
+                                <Image Source="http://is1.mzstatic.com/image/thumb/Music1/v4/80/19/99/8019999e-738b-530e-8de4-2e970048bd02/source/100x100bb.jpg" Stretch="Fill" />
+                            </Border>
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Width="Auto"
+                                Height="Auto"
+                                FontWeight="Bold"
+                                Text="{Binding Name}"
+                                TextTrimming="CharacterEllipsis"
+                                ToolTip="{Binding Name}" />
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                MaxHeight="60"
+                                LineHeight="15"
+                                LineStackingStrategy="BlockLineHeight"
+                                Text="{Binding Description}"
+                                TextTrimming="WordEllipsis"
+                                TextWrapping="Wrap"
+                                ToolTip="{Binding Description}" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Border>
+</UserControl>

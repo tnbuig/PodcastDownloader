@@ -1,0 +1,18 @@
+﻿<Application
+    x:Class="PD.OG.Client.Desktop.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:PD.OG.Client.Desktop"
+    xmlns:locator="clr-namespace:OG.PD.Client.Desktop"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <local:ViewModelLocator x:Key="ViewModelLocator"  />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Style.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
