@@ -1,14 +1,16 @@
+# The project is under maintanance and lost most of its code in the process - make this Readme file obsolete
+
 ## Welcome To "Podcast Downloader" Project
 ![ApplicationLook](/ApplicationLook1.png)
 
 #### Application is in its final stages but not ready for public use.
-> code contribution is welcome as well as suggestions and comments
+> code contributions are welcome as well as suggestions and comments
 - [x] Coding Main UI Moduls.
-- [x] Coding Backhand moduls stracture and test main functionalty.
-- [X] Start connecting the pieces to a working software and manual testing.
+- [ ] Coding Backhand moduls stracture and test main functionalty.
+- [ ] Start connecting the pieces to a working software and manual testing.
 - [ ] Fill in the gaps in the logic paths between UI and data base.
 - [ ] Complete implementation of Access layer interface.
-- [X] Moving web access work to background threads.
+- [ ] Moving web access work to background threads.
 - [ ] Add Tests.
 - [ ] Create Setup project.
 - [ ] Release final product.
@@ -33,7 +35,7 @@ The following Third parties were used:
 2. SQLite
 3. NSubstitute.
 4. MVVM Light
-5. IOC Container
+5. Unity
 ```
 Other free Application out there are : 
 1. [hermespod](http://hermespod.com/)
