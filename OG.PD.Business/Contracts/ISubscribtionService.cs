@@ -1,22 +1,22 @@
 ﻿using OG.PD.Business.Entities;
 using OG.PD.Common;
+using System;
 using System.Collections.Generic;
 using System.ServiceModel;
-using System.Threading.Tasks;
 
 namespace OG.PD.Business.Contracts
 {
     [ServiceContract]
-    internal interface IPodcastService
+    public interface ISubscribtionService
     {
         [OperationContract]
         [FaultContract(typeof(NotFoundException))]
-        IEnumerable<Episode> GetPodcastEpisodes(int podcastId);
+        Podcast SubscribeToPodcast(int podcastId, Uri rssFeed);
 
         [OperationContract]
-        IEnumerable<Episode> GetAllEpisodes();
-
-        [OperationContract]
-        IEnumerable<Podcast> GetAllPodcasts();
+        [FaultContract(typeof(NotFoundException))]
+        Podcast UnSubscribeFromPodcast(int podcastId);
     }
+
+
 }

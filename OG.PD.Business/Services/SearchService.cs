@@ -5,33 +5,29 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using OG.PD.Business.Entities;
 
 namespace OG.PD.Business.Services
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    public class EpisodeService : ServiceBase, IEpisodeService
+    public class SearchService : ServiceBase, ISearchService
     {
-        public bool DeleteEpisode(string podcastName, string episodeName, string downloadFolder)
+        public IEnumerable<string> GetAllCategories()
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteEpisode(int episodeId)
+        public IEnumerable<Podcast> GetTopPodcasts(int amount)
         {
             throw new NotImplementedException();
         }
 
-        public bool DownloadEpisode(string podcastName, string episodeName, string downloadFolder)
+        public IEnumerable<Podcast> SearchPodcastsByCategory(string keyword, string category)
         {
             throw new NotImplementedException();
         }
 
-        public bool DownloadEpisode(int episodeId, string downloadFolder)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool GetEpisodes(int podcastId)
+        public IEnumerable<Podcast> SearchPodcastsByKeyword(string keyword)
         {
             throw new NotImplementedException();
         }

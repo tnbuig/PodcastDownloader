@@ -21,9 +21,6 @@ namespace OG.PD.Business.Entities
         [DataMember]
         public Uri LogoUrl { get; set; }
 
-        [DataMember]
-        public bool IsSubscribed { get; set; }
-
         #region Oevrride
         public override string ToString()
         {

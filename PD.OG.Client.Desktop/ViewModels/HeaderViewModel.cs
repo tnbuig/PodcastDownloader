@@ -46,7 +46,8 @@ namespace PD.OG.Client.Desktop.ViewModels
                 Name = "Podcast Name",
                 Description = "Podcast Description usually few lines with all kind of stuff going on there pretty cool stuff advertisment etc...",
                 LogoUrl = new Uri("http://is1.mzstatic.com/image/thumb/Music1/v4/80/19/99/8019999e-738b-530e-8de4-2e970048bd02/source/100x100bb.jpg"),
-                IsSubscribed = true
+                PodcastId = 1,
+                RssFeed = new Uri("http://feeds.wnyc.org/radiolab"),
             });
         }
     }

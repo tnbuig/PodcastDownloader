@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IEpisodeService.cs" />
     <Compile Include="Contracts\IPodcastService.cs" />
+    <Compile Include="Contracts\ISubscribtionService.cs" />
+    <Compile Include="Contracts\ISearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\EpisodeService.cs" />
+    <Compile Include="Services\SubscribtionService.cs" />
+    <Compile Include="Services\SearchService.cs" />
     <Compile Include="Services\PodcastService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
   </ItemGroup>

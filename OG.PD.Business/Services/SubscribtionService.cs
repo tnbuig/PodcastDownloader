@@ -1,26 +1,23 @@
 ﻿using OG.PD.Business.Contracts;
-using OG.PD.Business.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.ServiceModel;
+using System.Text;
 using System.Threading.Tasks;
+using OG.PD.Business.Entities;
 
 namespace OG.PD.Business.Services
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    public class PodcastService : ServiceBase, IPodcastService
+    public class SubscribtionService : ServiceBase, ISubscribtionService
     {
-        public IEnumerable<Episode> GetAllEpisodes()
+        public Podcast SubscribeToPodcast(int podcastId, Uri rssFeed)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Podcast> GetAllPodcasts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<Episode> GetPodcastEpisodes(int podcastId)
+        public Podcast UnSubscribeFromPodcast(int podcastId)
         {
             throw new NotImplementedException();
         }

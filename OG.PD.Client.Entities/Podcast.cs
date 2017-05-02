@@ -2,6 +2,7 @@
 
 namespace OG.PD.Client.Entities
 {
+
     public class Podcast
     {
         public int PodcastId { get; set; }
@@ -13,8 +14,6 @@ namespace OG.PD.Client.Entities
         public Uri RssFeed { get; set; }
 
         public Uri LogoUrl { get; set; }
-
-        public bool IsSubscribed { get; set; }
 
         #region Oevrride
         public override string ToString()
@@ -30,7 +29,7 @@ namespace OG.PD.Client.Entities
                 return false;
             }
 
-            return Name == other.Name && IsSubscribed == other.IsSubscribed && Description == other.Description;
+            return Name == other.Name && Description == other.Description;
         }
 
         public override int GetHashCode()
