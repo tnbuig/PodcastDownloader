@@ -1,13 +1,12 @@
 ﻿using OG.PD.Business.Entities;
 using OG.PD.Common;
 using System;
-using System.Collections.Generic;
 using System.ServiceModel;
 
 namespace OG.PD.Business.Contracts
 {
     [ServiceContract]
-    public interface ISubscribtionService
+    public interface ISubscriptionService
     {
         [OperationContract]
         [FaultContract(typeof(NotFoundException))]
@@ -17,6 +16,4 @@ namespace OG.PD.Business.Contracts
         [FaultContract(typeof(NotFoundException))]
         Podcast UnSubscribeFromPodcast(int podcastId);
     }
-
-
 }

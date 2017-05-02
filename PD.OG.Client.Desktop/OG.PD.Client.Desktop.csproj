@@ -147,6 +147,10 @@
       <Project>{0F8D11EA-076D-4039-8C76-DFA0FECAB739}</Project>
       <Name>OG.PD.Client.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OG.PD.Client.Proxies\OG.PD.Client.Proxies.csproj">
+      <Project>{288702f9-fb7b-470f-8bd1-7e19138ada4b}</Project>
+      <Name>OG.PD.Client.Proxies</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\ApplicationIcon.ico" />

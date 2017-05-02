@@ -1,10 +1,10 @@
-﻿using OG.PD.Business.Entities;
+﻿using OG.PD.Client.Entities;
 using OG.PD.Common;
 using System.Collections.Generic;
 using System.ServiceModel;
 using System.Threading.Tasks;
 
-namespace OG.PD.Business.Contracts
+namespace OG.PD.Client.Proxies.Contracts
 {
     [ServiceContract]
     public interface IPodcastService
@@ -18,5 +18,13 @@ namespace OG.PD.Business.Contracts
 
         [OperationContract]
         IEnumerable<Podcast> GetAllPodcasts();
+
+        #region Async operations
+
+        Task<IEnumerable<Episode>> GetAllEpisodesAsync();
+
+        Task<IEnumerable<Podcast>> GetAllPodcastsAsync();
+
+        #endregion Async operations
     }
 }

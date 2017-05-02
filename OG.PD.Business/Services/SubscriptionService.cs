@@ -10,7 +10,7 @@ using OG.PD.Business.Entities;
 namespace OG.PD.Business.Services
 {
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
-    public class SubscribtionService : ServiceBase, ISubscribtionService
+    public class SubscriptionService : ServiceBase, ISubscriptionService
     {
         public Podcast SubscribeToPodcast(int podcastId, Uri rssFeed)
         {

@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0141CA59
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OG.PD.Client.Desktop.Tests", "OG.PD.Client.Desktop.Tests\OG.PD.Client.Desktop.Tests.csproj", "{426AF2DF-F0D0-4771-BCD2-3B4D4909E486}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OG.PD.Client.Proxies", "OG.PD.Client.Proxies\OG.PD.Client.Proxies.csproj", "{288702F9-FB7B-470F-8BD1-7E19138ADA4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{426AF2DF-F0D0-4771-BCD2-3B4D4909E486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{426AF2DF-F0D0-4771-BCD2-3B4D4909E486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{426AF2DF-F0D0-4771-BCD2-3B4D4909E486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288702F9-FB7B-470F-8BD1-7E19138ADA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288702F9-FB7B-470F-8BD1-7E19138ADA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288702F9-FB7B-470F-8BD1-7E19138ADA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288702F9-FB7B-470F-8BD1-7E19138ADA4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,5 +86,6 @@ Global
 		{DCC0C67E-1D13-4E8B-A031-9921C170F0AC} = {7C568DF4-29FE-4D18-8FFC-EDD3F90D5633}
 		{64334F47-A545-4D3D-BD73-3BCAA8751CEE} = {CE583B8F-2480-4696-9B77-05FADCDBB626}
 		{426AF2DF-F0D0-4771-BCD2-3B4D4909E486} = {0141CA59-FF87-4DAF-882B-536A79764210}
+		{288702F9-FB7B-470F-8BD1-7E19138ADA4B} = {102FD860-9FDA-47CD-8ECF-7C3BB1CA426D}
 	EndGlobalSection
 EndGlobal

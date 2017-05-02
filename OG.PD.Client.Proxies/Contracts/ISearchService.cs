@@ -1,9 +1,10 @@
-﻿using OG.PD.Business.Entities;
+﻿using OG.PD.Client.Entities;
 using OG.PD.Common;
 using System.Collections.Generic;
 using System.ServiceModel;
+using System.Threading.Tasks;
 
-namespace OG.PD.Business.Contracts
+namespace OG.PD.Client.Proxies.Contracts
 {
     [ServiceContract]
     public interface ISearchService
@@ -20,5 +21,16 @@ namespace OG.PD.Business.Contracts
 
         [OperationContract]
         IEnumerable<string> GetAllCategories();
+
+        #region Async operations
+
+        Task<IEnumerable<Podcast>> SearchPodcastsByKeywordAsync(string keyword);
+
+        Task<IEnumerable<Podcast>> SearchPodcastsByCategoryAsync(string keyword, string category);
+
+        Task<IEnumerable<Podcast>> GetTopPodcastsAsync(int amount);
+
+        #endregion Async operations
+
     }
 }
