@@ -1,4 +1,4 @@
-# The project is under maintanance and lost most of its code in the process - make this Readme file obsolete
+# The project is under maintanance and lost most of its code in the process - make this Readme file obsolete &#x1F499;
 
 ## Welcome To "Podcast Downloader" Project
 ![ApplicationLook](/ApplicationLook1.png)
